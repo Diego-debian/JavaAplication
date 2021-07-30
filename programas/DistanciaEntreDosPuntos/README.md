@@ -17,14 +17,10 @@
 
 ![Interfaz Grafica en java para calcular la distancia entre dos puntos](https://github.com/Diego-debian/JavaAplication/blob/main/programas/DistanciaEntreDosPuntos/img/Captura%20de%20pantalla_2021-07-29_21-43-21.png?raw=true)
 
-
-'''java
-
-/**
- * Diego Parra
- * 
- * Calcula distancia entre dos puntos
- */
+```java
+		
+// Diego Parra
+// Calcula distancia entre dos puntos
 
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -170,4 +166,4 @@ public class distancia
     }
 
 }
-'''
+```
