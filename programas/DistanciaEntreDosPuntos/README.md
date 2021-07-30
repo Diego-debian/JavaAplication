@@ -175,12 +175,15 @@ public class distancia
 }
 ```
 
-**¿Cómo correr el programa? **
+**¿Cómo correr el programa?**
 
 Debe tener instaladas la libreria swing de java
 
+
 ```
+
 usuario@linux$: javac distancia.java
 usuario@linux$: java distancia
+
 
 ```
