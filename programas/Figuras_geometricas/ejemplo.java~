@@ -1,0 +1,74 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+
+class Dibujar extends JFrame{
+
+ public static void main(String[] args) {
+  // TODO Auto-generated method stub
+  Dibujar oDibujar = new Dibujar();
+  oDibujar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ }
+ //constructor
+ public Dibujar(){
+  super("Dibujo de fuguras en 2D");
+  setSize(1000,600);
+  setVisible(true);
+ }
+ public void paint (Graphics g){
+  //lllamada al metodo paint
+  super.paint(g);
+  
+  //activamos el color
+  g.setColor(Color.blue);
+  
+  //dibuja una linea desde la coordenada x hasta la coordenada y de color azul
+  g.drawLine(0, 70, 50, 70);
+  
+  //dibujamos un rectangulo desde la coordenada (150,70) con ancho de 50 pix y alto de 70
+  //solo se pinta el perimetro
+  g.drawRect(150, 70, 50, 70);
+  
+  //igual que drawRect pero con los vertices redondeados
+  g.drawRoundRect(250,70,50,70,6,6);
+  
+  //dibujamos un ovalo
+  g.drawOval(350, 70, 50, 70);
+  
+  //circulo
+  g.drawOval(600, 70, 70, 70);
+  
+  //dibujamos un triangulo, indicamos mediante los vertices cada punto del triangulo
+  //el primer punto: (500,70), segundo:(550,120), tercero:(450,120)
+  int [] vx1 = {500,550,450};
+  int [] vy1 = {70,120,120};
+  //lr pasamos los puntos y el numero de lados
+  g.drawPolygon(vx1, vy1, 3);
+  
+  //activamos el color
+  g.setColor ( Color.red);
+  //rectangulo pintado
+  g.fillRect(150, 270, 50, 70);
+  //igual que drawRect pero pinta interior
+  g.fillRoundRect(250, 270, 50, 70, 6, 6);
+  //igual que drawOval pero ppinta interior
+  g.fillOval(350, 270, 50, 70);
+  
+  //igual qeu drawPolygon pero pinta el interior
+  int [] vx2 = {500,550,450};
+  int [] vy2 = {270,320,320};
+  g.fillPolygon(vx2,vy2, 3);
+  
+  //igual qeu drawPolygon pero pinta el interior
+  int [] vx3 = {600, 600, 700, 700};
+  int [] vy3 = {400,500,500 , 400};
+  g.drawPolygon(vx3,vy3, 4);
+  int [] vx4 = {700, 700, 750, 750};
+  int [] vy4 = {400,500,550 , 450};
+
+  g.drawPolygon(vx4,vy4, 4);
+    
+ }
+
+}
